@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Betala – SvenskaPlan</title>
+  <meta name="description" content="Betala för dina digitala bygglovsmallar enkelt och säkert med Billmate. Få direkt tillgång till dina mallar efter köp.">
+  <meta property="og:title" content="Betala – SvenskaPlan">
+  <meta property="og:description" content="Betala för dina digitala bygglovsmallar enkelt och säkert med Billmate. Få direkt tillgång till dina mallar efter köp.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://svenskaplan.se/betalning.html">
+  <meta property="og:site_name" content="SvenskaPlan">
+  <meta property="og:locale" content="sv_SE">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style-v2.css">
+  <style>
+    .info-section h1,
+    .info-section h2,
+    .info-section h3,
+    .info-section p,
+    .info-section ul,
+    .info-section ol,
+    .info-section li,
+    .info-section .description {
+      color: var(--marine-blue) !important;
+    }
+    .info-section strong {
+      color: var(--marine-blue);
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Hoppa till huvudinnehåll</a>
+  <header role="banner">
+    <div class="header-container">
+      <span class="logo" aria-label="SvenskaPlan – startsida">
+        <span class="logo-icon">
+          <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="6" width="16" height="20" rx="3" fill="#fff" stroke="#0a2342" stroke-width="2"/>
+            <rect x="5" y="10" width="10" height="2" rx="1" fill="#0a2342"/>
+            <rect x="5" y="15" width="10" height="2" rx="1" fill="#0a2342"/>
+            <rect x="5" y="20" width="7" height="2" rx="1" fill="#0a2342"/>
+            <g transform="translate(20,10)">
+              <rect x="0" y="10" width="14" height="8" rx="2" fill="#fff" stroke="#0a2342" stroke-width="2"/>
+              <rect x="3" y="13" width="8" height="2" rx="1" fill="#0a2342"/>
+              <rect x="5.5" y="8" width="3" height="3" rx="1.5" fill="#0a2342"/>
+            </g>
+          </svg>
+        </span>
+        <span>SVENSKAPLAN</span>
+      </span>
+      <button class="hamburger" aria-label="Öppna meny" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav role="navigation" aria-label="Huvudmeny">
+        <ul class="main-nav" id="main-nav">
+          <li><a href="index.html">Hem</a></li>
+          <li><a href="hur-det-fungerar.html">Hur det fungerar</a></li>
+          <li><a href="gor-egna-ritningar.html">Gör egna ritningar</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content" tabindex="-1" role="main">
+    <section class="info-section" aria-label="Betalning" style="max-width:480px;margin:3em auto 3em auto;text-align:center;">
+      <h1>Betala för din bygglovsmall</h1>
+      <p class="description">Du betalar säkert med Billmate. Efter genomförd betalning får du direkt tillgång till dina digitala mallar.</p>
+      <div style="background:#fff;border-radius:14px;box-shadow:0 2px 12px rgba(10,35,66,0.07);padding:1.5em 1.2em;margin-bottom:2em;">
+        <h2 style="margin-bottom:0.5em;">Sammanfattning</h2>
+        <div style="font-weight:600;">Produkt: <span id="produkt-namn">Bygglovsmallar – Plank/Altan</span></div>
+        <div>Pris: <span id="produkt-pris">199 kr</span></div>
+        <div style="font-size:0.95em;color:#444;margin-top:1em;">Digital leverans – du får mallarna direkt efter betalning.</div>
+      </div>
+      <!-- Här lägger du in Billmate Checkout-scriptet när du fått din kod -->
+      <div id="billmate-checkout" style="margin:2em 0;">
+        <p style="color:#888;">[Här visas Billmate Checkout när du har lagt in din kod]</p>
+      </div>
+      <div style="font-size:0.95em;color:#666;margin-top:2em;">Vid frågor, <a href="kontakt.html">kontakta oss</a>.</div>
+    </section>
+  </main>
+  <footer role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-brand">SVENSKAPLAN</div>
+      <div class="footer-links">
+        <a href="kontakt.html#kopvillkor">Köpvillkor</a> |
+        <a href="kontakt.html#gdpr">GDPR</a> |
+        <a href="kontakt.html#om-oss">Om oss</a>
+      </div>
+      <div class="footer-contact">
+        <div>E-post: <a href="mailto:info@svenskaplan.se" class="footer-email">info@svenskaplan.se</a></div>
+        <div>Telefon: 070-123 45 67</div>
+      </div>
+      <div class="footer-note">Vi följer Boverkets och kommunernas krav. Mallarna är vägledande, ej juridisk rådgivning.<br>© 2025 SVENSKAPLAN. Alla rättigheter förbehållna.</div>
+    </div>
+  </footer>
+  <script>
+  // Hamburger meny för mobil
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('.main-nav');
+  hamburger.addEventListener('click', function() {
+    nav.classList.toggle('open');
+    hamburger.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', nav.classList.contains('open'));
+  });
+  // Produktinfo från URL
+  function getParam(name) {
+    const url = new URL(window.location.href);
+    return url.searchParams.get(name);
+  }
+  const produkt = getParam('produkt');
+  const pris = getParam('pris');
+  if (produkt) document.getElementById('produkt-namn').textContent = produkt;
+  if (pris) document.getElementById('produkt-pris').textContent = pris + ' kr';
+  </script>
+</body>
+</html> 
