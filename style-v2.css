@@ -718,6 +718,7 @@ footer a:focus {
     display: flex;
   }
   .header-container {
-    position: relative;
+    position: sticky;
+    top: 0;
   }
 } 
