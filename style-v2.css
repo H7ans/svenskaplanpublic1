@@ -297,6 +297,7 @@ section p,
   margin-top: 1.5em;
   box-shadow: 0 2px 8px rgba(10,35,66,0.08);
   transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+  cursor: pointer;
 }
 .cta-btn:hover, .cta-btn:focus {
   background: var(--cta-hover);
@@ -394,6 +395,7 @@ section p,
   max-width: 220px;
   justify-content: center;
   gap: 0.7em;
+  cursor: pointer;
 }
 .buy-btn:hover, .buy-btn:focus {
   background: var(--cta-hover);
@@ -653,7 +655,7 @@ footer a:focus {
   letter-spacing: 2px;
   text-transform: uppercase;
   text-decoration: none;
-  cursor: default;
+  cursor: pointer;
   user-select: none;
 }
 .logo .logo-icon {
