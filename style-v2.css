@@ -252,6 +252,12 @@ section p,
   color: #444;
   text-align: left;
 }
+.tagline {
+  text-align: left;
+  font-size: 1em;
+  margin-top: 0.8em;
+  color: #555;
+}
 .usp-list {
   background: #fff;
   border-radius: 14px;
